@@ -12,40 +12,40 @@ project 1 - A Random Quote Generator
 ***/
 
 
-const famousQuotes = [
+const quotes = [
 
 {
   quote: "What does not kill you make you stronger.",
   author:  "Friedrich Nietzsche",
-  source: 'phrase',
+  citation: 'phrase',
   year: "19th century"
 },
 
 {
   quote: "Practice makes perfect.",
   author:  "Vince Lombardi",
-  source: "phrase",
+  citation: "phrase",
   year: "20th century"
 },
 
 {
   quote: "The journey of a thousand miles begins with one step.",
   author:  "Lao Tsu",
-  source: "phrase",
+  citation: "phrase",
   year: "5th century B.C."
 },
 
 {
   quote: "Life is like a box of chocolates. You never know wich one you are going to get.",
   author:  "Forest Gump",
-  source: "movie",
+  citation: "movie",
   year: "20th century"
 },
 
 {
   quote: "When life gives you lemons, make a lemonade.",
   author:  "Elbert Hubbard",
-  source: "phrase",
+  citation: "phrase",
   year: "19th century"
 }
 

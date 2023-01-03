@@ -52,19 +52,18 @@ const quotes = [
 ];
 
 /***
- * `getRandomQuote` function
+ * 1)`getRandomQuote` function
 ***/
 /**
- * Returns a random number between two numbers.
+ * This function returns the one random quote from an array of objects.
  *
- * @param {number} lower - The lowest number value.
- * @param {number} upper - The highest number value.
- * @return {number} The random number value.
+ * @param {array} arr - Takes in an array of famous qotes (array of objects in this case).
+ * @return {string} The random quote fron an array of objects.
  */
 
 function getRandomQuote(arr) {
-  let randomNumber = Math.floor(Math.random() * arr.length) + 1; 
-  return randomNumber;
+  let randomNumber = Math.floor(Math.random() * arr.length); 
+  return arr[randomNumber].quote;
 }
 
 //Testing
@@ -74,11 +73,8 @@ console.log( getRandomQuote(quotes) );
 
 
 
-
-
-
 /***
- * `printQuote` function
+ * `2) printQuote` function
 ***/
 /**
  * Returns a random number between two numbers.

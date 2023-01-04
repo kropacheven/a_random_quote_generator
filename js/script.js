@@ -16,35 +16,35 @@ const quotes = [
 
 {
   quote: "What does not kill you make you stronger.",
-  author:  "Friedrich Nietzsche",
+  source:  "Friedrich Nietzsche",
   citation: 'phrase',
   year: "19th century"
 },
 
 {
   quote: "Practice makes perfect.",
-  author:  "Vince Lombardi",
+  source:  "Vince Lombardi",
   citation: "phrase",
   year: "20th century"
 },
 
 {
   quote: "The journey of a thousand miles begins with one step.",
-  author:  "Lao Tsu",
+  source:  "Lao Tsu",
   citation: "phrase",
   year: "5th century B.C."
 },
 
 {
   quote: "Life is like a box of chocolates. You never know wich one you are going to get.",
-  author:  "Forest Gump",
+  source:  "Forest Gump",
   citation: "movie",
   year: "20th century"
 },
 
 {
   quote: "When life gives you lemons, make a lemonade.",
-  author:  "Elbert Hubbard",
+  source:  "Elbert Hubbard",
   citation: "phrase",
   year: "19th century"
 }
@@ -66,9 +66,11 @@ function getRandomQuote(arr) {
   return arr[randomNumber];
 }
 
+
+
 //Testing getRandomQuote function:
-console.log( getRandomQuote(quotes) );
-console.log( typeof getRandomQuote(quotes) );
+// console.log( getRandomQuote(quotes) );
+// console.log( typeof getRandomQuote(quotes) );
 
 
 
@@ -77,12 +79,26 @@ console.log( typeof getRandomQuote(quotes) );
  * `2) printQuote` function
 ***/
 /**
- * Returns a random number between two numbers.
- *
- * @param {number} lower - The lowest number value.
- * @param {number} upper - The highest number value.
- * @return {number} The random number value.
+ * Prints an html <p> tags into index.html file.
  */
+
+function printQuote() {
+  const randomQuote = getRandomQuote(quotes);
+  // return randomQuote;
+  let htmlQuote = `
+  <p class='quote'> ${randomQuote.quote} </p>
+  <p class='author'> ${randomQuote.source}`
+  if (randomQuote.citation) {
+    htmlQuote += `<span class="citation"> ${randomQuote.citation} </span>`;
+  }
+  if (randomQuote.year) {
+    htmlQuote += `<span class="citation"> ${randomQuote.year} </span> </p>`;
+  }
+  document.getElementById('quote-box').innerHTML = htmlQuote;
+}
+
+//Testing printQuote():
+console.log(printQuote() );
 
 
 
@@ -91,4 +107,4 @@ console.log( typeof getRandomQuote(quotes) );
  * DO NOT CHANGE THE CODE BELOW!!
 ***/
 
-//document.getElementById('load-quote').addEventListener("click", printQuote, false);
+document.getElementById('load-quote').addEventListener("click", printQuote, false);

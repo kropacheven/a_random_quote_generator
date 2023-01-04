@@ -120,6 +120,16 @@ function randomColor() {
  }
  
 
+ /***
+ * `4) setInterval` function
+***/
+/**
+ * Function renews a quote (prints new quote) every 20 seconds .
+ */
+
+setInterval(printQuote, 20000);
+setInterval(randomColor, 20000);
+
 /***
  * click event listener for the print quote button
  * DO NOT CHANGE THE CODE BELOW!!

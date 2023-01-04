@@ -101,6 +101,24 @@ function printQuote() {
 console.log(printQuote() );
 
 
+//Extra credit
+
+/***
+ * `3) randomColor` function
+***/
+/**
+ * Function gives to the body of the document random RGB color every time new quote loads .
+ */
+
+function randomColor() {
+  const r = Math.floor(Math.random() * 256 + 1);
+  const g = Math.floor(Math.random() * 256 + 1);
+  const b = Math.floor(Math.random() * 256 + 1);
+  const colorRGB ="rgb("+r+", "+g+", "+b+")";
+  console.log(colorRGB);
+  document.body.style.backgroundColor = colorRGB;
+ }
+ 
 
 /***
  * click event listener for the print quote button
@@ -108,3 +126,5 @@ console.log(printQuote() );
 ***/
 
 document.getElementById('load-quote').addEventListener("click", printQuote, false);
+document.getElementById('load-quote').addEventListener("click", randomColor, false);
+

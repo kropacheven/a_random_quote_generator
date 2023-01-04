@@ -105,7 +105,7 @@ function randomColor() {
   const red = Math.floor(Math.random() * 256 + 1);
   const green = Math.floor(Math.random() * 256 + 1);
   const blue = Math.floor(Math.random() * 256 + 1);
-  const colorRGB ="rgb("+red+", "+green+", "+blue+")";
+  const colorRGB =`rgb(${red}, ${green}, ${blue})`;
   console.log(colorRGB);
   document.body.style.backgroundColor = colorRGB;
  }

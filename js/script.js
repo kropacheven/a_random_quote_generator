@@ -17,23 +17,19 @@ const quotes = [
 {
   quote: "What does not kill you make you stronger.",
   source:  "Friedrich Nietzsche",
-  //citation: 'phrase',
   year: "19th century",
-  //tags: "literature"
 },
 
 {
   quote: "Practice makes perfect.",
   source:  "Vince Lombardi",
   citation: "phrase",
-  //year: "20th century",
   tags: "sport"
 },
 
 {
   quote: "The journey of a thousand miles begins with one step.",
   source:  "Lao Tsu",
-  //citation: "phrase",
   year: "5th century B.C.",
   tags: 'philosophy'
 },
@@ -42,25 +38,19 @@ const quotes = [
   quote: "Life is like a box of chocolates. You never know wich one you are going to get.",
   source:  "Forest Gump",
   citation: "movie",
-  //year: "20th century",
-  //tags: "culture"
 },
 
 {
   quote: "When life gives you lemons, make a lemonade.",
   source:  "Elbert Hubbard",
-  //citation: "phrase",
   year: "19th century",
   tags: "motivation"
 }
-
 ];
 
-/***
- * 1)`getRandomQuote` function
-***/
+
 /**
- * This function returns the one random quote from an array of objects.
+ * 1) getRandomQuote function: This function returns the one random quote from an array of objects.
  *
  * @param {array} arr - Takes in an array of famous qotes (array of objects in this case).
  * @return {object} - One random object from an array of objects.
@@ -71,20 +61,14 @@ function getRandomQuote(arr) {
   return arr[randomNumber];
 }
 
-
-
 //Testing getRandomQuote function:
 // console.log( getRandomQuote(quotes) );
 // console.log( typeof getRandomQuote(quotes) );
 
 
 
-
-/***
- * `2) printQuote` function
-***/
 /**
- * Prints an html <p> tags into index.html file.
+ * 2) printQuote function: Injects an html <p> tags of random phrase into index.html file.
  */
 
 function printQuote() {
@@ -108,16 +92,13 @@ function printQuote() {
 }
 
 //Testing printQuote():
-console.log(printQuote() );
+//console.log(printQuote() );
 
 
-//Extra credit
+// ========= Extra credit ================== //
 
-/***
- * `3) randomColor` function
-***/
 /**
- * Function gives to the body of the document random RGB color every time new quote loads .
+ * 3) randomColor function: gives to the body of the document random RGB color every time new quote loads.
  */
 
 function randomColor() {
@@ -130,21 +111,19 @@ function randomColor() {
  }
  
 
- /***
- * `4) setInterval` function
-***/
 /**
- * Function renews a quote (prints new quote) every 20 seconds .
+ * 4) setInterval function: renews a quote (prints new quote) and body color every 20 seconds.
  */
 
 setInterval(printQuote, 20000);
 setInterval(randomColor, 20000);
 
+
 /***
- * click event listener for the print quote button
+ * click event listener for the print quote button (and + change color)
  * DO NOT CHANGE THE CODE BELOW!!
 ***/
-
 document.getElementById('load-quote').addEventListener("click", printQuote, false);
+
 document.getElementById('load-quote').addEventListener("click", randomColor, false);
 

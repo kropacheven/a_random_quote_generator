@@ -58,17 +58,17 @@ const quotes = [
  * This function returns the one random quote from an array of objects.
  *
  * @param {array} arr - Takes in an array of famous qotes (array of objects in this case).
- * @return {string} The random quote fron an array of objects.
+ * @return {object} - One random object from an array of objects.
  */
 
 function getRandomQuote(arr) {
   let randomNumber = Math.floor(Math.random() * arr.length); 
-  return arr[randomNumber].quote;
+  return arr[randomNumber];
 }
 
-//Testing
+//Testing getRandomQuote function:
 console.log( getRandomQuote(quotes) );
-
+console.log( typeof getRandomQuote(quotes) );
 
 
 

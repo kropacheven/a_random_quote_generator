@@ -17,36 +17,41 @@ const quotes = [
 {
   quote: "What does not kill you make you stronger.",
   source:  "Friedrich Nietzsche",
-  citation: 'phrase',
-  year: "19th century"
+  //citation: 'phrase',
+  year: "19th century",
+  //tags: "literature"
 },
 
 {
   quote: "Practice makes perfect.",
   source:  "Vince Lombardi",
   citation: "phrase",
-  year: "20th century"
+  //year: "20th century",
+  tags: "sport"
 },
 
 {
   quote: "The journey of a thousand miles begins with one step.",
   source:  "Lao Tsu",
-  citation: "phrase",
-  year: "5th century B.C."
+  //citation: "phrase",
+  year: "5th century B.C.",
+  tags: 'philosophy'
 },
 
 {
   quote: "Life is like a box of chocolates. You never know wich one you are going to get.",
   source:  "Forest Gump",
   citation: "movie",
-  year: "20th century"
+  //year: "20th century",
+  //tags: "culture"
 },
 
 {
   quote: "When life gives you lemons, make a lemonade.",
   source:  "Elbert Hubbard",
-  citation: "phrase",
-  year: "19th century"
+  //citation: "phrase",
+  year: "19th century",
+  tags: "motivation"
 }
 
 ];
@@ -92,8 +97,13 @@ function printQuote() {
     htmlQuote += `<span class="citation"> ${randomQuote.citation} </span>`;
   }
   if (randomQuote.year) {
-    htmlQuote += `<span class="citation"> ${randomQuote.year} </span> </p>`;
+    htmlQuote += `<span class="citation"> ${randomQuote.year} </span>`;
   }
+  if (randomQuote.tags) {
+    htmlQuote += `<span class="citation"> ${randomQuote.tags} </span>`;
+  }
+  htmlQuote += `</p>`;
+
   document.getElementById('quote-box').innerHTML = htmlQuote;
 }
 
@@ -111,10 +121,10 @@ console.log(printQuote() );
  */
 
 function randomColor() {
-  const r = Math.floor(Math.random() * 256 + 1);
-  const g = Math.floor(Math.random() * 256 + 1);
-  const b = Math.floor(Math.random() * 256 + 1);
-  const colorRGB ="rgb("+r+", "+g+", "+b+")";
+  const red = Math.floor(Math.random() * 256 + 1);
+  const green = Math.floor(Math.random() * 256 + 1);
+  const blue = Math.floor(Math.random() * 256 + 1);
+  const colorRGB ="rgb("+red+", "+green+", "+blue+")";
   console.log(colorRGB);
   document.body.style.backgroundColor = colorRGB;
  }

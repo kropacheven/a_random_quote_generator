@@ -115,7 +115,10 @@ function randomColor() {
  * 4) setInterval function: renews a quote (prints new quote) and body color every 20 seconds.
  */
 
+//for printQuote function:
 setInterval(printQuote, 20000);
+
+//for randomColor function:
 setInterval(randomColor, 20000);
 
 
@@ -123,7 +126,10 @@ setInterval(randomColor, 20000);
  * click event listener for the print quote button (and + change color)
  * DO NOT CHANGE THE CODE BELOW!!
 ***/
+
+//for printQuote function:
 document.getElementById('load-quote').addEventListener("click", printQuote, false);
 
+//for printQuote function:
 document.getElementById('load-quote').addEventListener("click", randomColor, false);
 

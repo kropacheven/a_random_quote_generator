@@ -7,7 +7,7 @@
  If there is no button click, a new quote automatically displays every 20 seconds.
  With every new quote background color of the page is also being changed automatically.
 
- Web Technlologies used to build the project:
+ Web Technologies used to build the project:
 1. Basic Java script: variables, arrays, objects, conditionals and functions;
 2. Math.random() function;
 2. setInterval() function.

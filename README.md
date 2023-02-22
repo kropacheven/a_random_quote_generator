@@ -12,4 +12,7 @@
 2. Math.random() function;
 2. setInterval() function.
 
+You can take a look at the live project: https://kropacheven.github.io/a_random_quote_generator/
+
+
 
